@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('contacts/index');
-// });
-
 Route::get('/', 'ContactController@index');
 Route::resource('contacts', 'ContactController');
 Route::get('contacts/create/search', 'ContactController@simple')->name('simple_search');
