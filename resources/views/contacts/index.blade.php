@@ -1,4 +1,6 @@
 @extends('base')
+@extends('layouts.app')
+
 @section('main')
 <h3>Simple Search</h3><br>
     <form action="{{ route('simple_search') }}" method="GET">
