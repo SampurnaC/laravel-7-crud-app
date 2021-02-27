@@ -20,6 +20,7 @@
   <table class="table table-striped">
     <thead>
         <tr>
+          <td>User Name</td>
           <td>ID</td>
           <td>Name</td>
           <td>Email</td>
@@ -31,7 +32,9 @@
     </thead>
     <tbody>
         @foreach($contacts as $contact)
+
         <tr>
+            <td>{{$contact->user['email']}}</td>
             <td>{{$contact->id}}</td>
             <td>{{$contact->first_name}} {{$contact->last_name}}</td>
             <td>{{$contact->email}}</td>

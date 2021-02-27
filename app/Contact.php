@@ -12,6 +12,11 @@ class Contact extends Model
     'email',
     'city',
     'country',
-    'job_title'       
+    'job_title',
+    'user_id'       
   ];
+
+  public function user() {
+    return $this->belongsTo('App\User');
+  }
 }

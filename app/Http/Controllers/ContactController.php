@@ -74,7 +74,8 @@ class ContactController extends Controller
         'email' => $request->get('email'),
         'job_title'=> $request->get('job_title'),
         'city'=> $request->get('city'),
-        'country'=> $request->get('country')
+        'country'=> $request->get('country'),
+        'user_id'=>auth()->user()->id
       ]);
       $contact->save();
       return redirect('/contacts')->with('success', 'Contact saved!');
